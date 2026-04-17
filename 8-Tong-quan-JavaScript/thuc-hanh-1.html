@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiển thị đầu ra</title>
+</head>
+<body>
+    <div id="messageDiv">123</div>
+    <button type="button" onclick="showMessage3();">Click Me!</button>
+<script>
+    function showMessage(){
+        alert('Xin chào!')
+    }
+    function showMessage1(){
+        document.getElementById('messageDiv').innerHTML="Kieu My"
+    }
+    function showMessage2(){
+        document.write('Vui qué');
+    }
+    function showMessage3(){
+        console.log('Thời tiết');
+    }
+</script>
+</body>
+</html>
