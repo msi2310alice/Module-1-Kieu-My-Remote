@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phần 2-Tạo form đơn giản</title>
+    <style>
+        body {
+            background-color: blanchedalmond;
+        }
+        h1{
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(204, 231, 240);
+            padding: 10px;
+        }
+        label {
+            color: blue;
+            font-family: Arial, Helvetica, sans-serif;
+            display: inline-block;
+
+        }
+        .formrow {
+            display: flex;
+            margin-bottom: 10px;
+            
+        }
+        .formrow label {
+            width: 110px;
+            
+        }
+        .bt {
+            margin-left: 110px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+    <div class="formrow">
+        <label for="hovaten">Họ và tên</label>
+        <input type="text" name="hoten" id="hovaten">
+    </div>
+    <div class="formrow">
+        <label for="nsinh">Ngày sinh</label>
+        <input type="text" name="ngaysinh" id="nsinh">
+    </div>
+    <div class="formrow">
+        <label>Giới tính</label>
+        <input type="radio" name="gioitinh" id="nam" value="Nam">
+        <label for="nam">Nam</label>
+        <input type="radio" name="gioitinh" id="nu" value="Nu">
+        <label for="nu">Nữ</label>
+    </div>
+    <div class="formrow">
+        <label for="dchi">Địa chỉ</label>
+        <textarea name="diachi" id="dchi" cols="50" rows="5"></textarea>
+    </div>
+    <div class="formrow">
+        <label for="lp">Lớp</label>
+        <select name="lop" id="lp">
+            <option value="chonlop">--Chọn lớp--</option>
+            <option value="LopA">Lớp A</option>
+            <option value="LopB">Lớp B</option>
+            <option value="LopC">Lớp C</option>
+        </select>
+    </div>
+    <div class="formrow">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="mail">
+    </div>
+    <div class="formrow">
+        <label for="dt">Điện thoại</label>
+        <input type="text" name="dienthoai" id="dt">
+    </div>
+    <div class="bt">
+        <input type="submit" value="Đăng ký">
+        <input type="reset" name="reset" id="rs" value="Nhập lại">
+    </div>
+    
+    </form>
+</body>
+</html>
