@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey khách hàng</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+        }
+        .dl, .ct {
+            display: inline-flex;
+        }
+        .dl {
+            flex-direction: column;
+        }
+        .ct {
+            flex-direction: column;
+        }
+        table {
+            width: 100%;
+            border: 1px solid gray;
+            
+            margin: 5px;
+            border-collapse: collapse;
+        }
+        tr, td {
+            padding: 5px;
+            vertical-align: middle;
+            border: 1px solid rgb(233, 226, 226);
+        }
+        tr:nth-child(odd) {
+            background-color: rgb(232, 239, 240);
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>Market Research Survey</h1>
+        <p>Please take a few moments to complete this satisfaction survey.</p>
+        <h4>Which is your age range?</h4>
+        <div class="formrow">
+            <select name="agerange" id="age">
+                <option value="18-24">18-24</option>
+                <option value="24-32">24-32</option>
+                <option value="lon-hon-32">&#62; 32</option>
+            </select>
+        </div>
+        <h4>What is your yearly income range?</h4>
+        <div class="formrow">
+            <select name="incomerange" id="income">
+                <option value="0-25000">$0-$25,000</option>
+                <option value="25000-32000">$25,000-$32,000</option>
+                <option value="lon-hon-32000">&#62; $32,000</option>
+            </select>
+        </div>
+        <h4>Gender</h4>
+        <div class="formrow">
+            <input type="radio" name="gender" id="male" value="male">
+            <label for="male">Male</label>
+            <br>
+            <input type="radio" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+        </div>
+        <h4>Which of the following products have your purchased in the last 2 months. Please check all that apply.</h4>
+        <div class="formrow"> 
+            <input type="checkbox" name="Product" id ="pd1" value="product1">
+            <label for="pd1">Product 1</label>
+            <br>
+            <input type="checkbox" name="Product" id ="pd2" value="product2">
+            <label for="pd2">Product 2</label>
+            <br>
+            <input type="checkbox" name="Product" id ="pd3" value="product3">
+            <label for="pd3">Product 3</label>
+        </div>
+        <h4>How often would you use our new product?</h4>
+        <div class="formrow">
+            <input type="checkbox" name="tansuat" id="d" value="daily">
+            <label for="d">Daily</label>
+            <br>
+            <input type="checkbox" name="tansuat" id="w" value="weekly">
+            <label for="w">Weekly</label>
+            <br>
+            <input type="checkbox" name="tansuat" id="m" value="monthly">
+            <label for="m">Monthly</label>
+        </div>
+        <h4>What would you pay for the new product?</h4>
+        <div class="dollarcent">
+            <label for="dollar">$</label>
+            <div class="dl">
+                 <input type="text" name="dollars" id="dollar">
+                 <label for="dollar">Dollars</label>
+            </div>
+            <label for="cent">.</label>
+            <div class="ct">
+                <input type="text" name="cents" id="cent">
+                <label for="cent">Cents</label>
+            </div>         
+        </div>
+        <h4>What features would you like to see in the new product.</h4>
+        <div class="formrow">
+            <textarea name="features" id="ft" cols="100" rows="8"></textarea>
+        </div>
+        <p>Please rate your level of agreement with the following statements.</p>
+        <table>
+            <tr>
+                <td></td>
+                <td>Strongly Disagree</td>
+                <td>Disagree</td>
+                <td>Agree</td>
+                <td>Strongly Agree</td>
+            </tr>
+            <tr>
+                <td>Our products are priced fairly.</td>
+                <td>
+                    <input type="radio" name="price" id="sd-price">
+                    <label for="st-price">1</label>
+                </td>
+                <td>
+                    <input type="radio" name="price" id="d-price">
+                    <label for="d-price">2</label>
+                </td>
+                <td>
+                    <input type="radio" name="price" id="a-price">
+                    <label for="a-price">3</label>
+                </td>
+                <td>
+                    <input type="radio" name="price" id="sa-price">
+                    <label for="sa-price">4</label>
+                </td>
+            </tr>
+            <tr>
+                <td>Our products are high quality.</td>
+                <td>
+                    <input type="radio" name="quality" id="st-quality">
+                    <label for="st-quality">1</label>
+                </td>
+                <td>
+                    <input type="radio" name="quality" id="d-quality">
+                    <label for="d-quality">2</label>
+                </td>
+                <td>
+                    <input type="radio" name="quality" id="a-quality">
+                    <label for="a-quality">3</label>
+                </td>
+                <td>
+                    <input type="radio" name="quality" id="sa-quality">
+                    <label for="sa-quality">4</label>
+                </td>
+            </tr>
+            <tr>
+                <td>You would recommend our product to a friend or coworker.</td>
+                <td>
+                    <input type="radio" name="recommend" id="st-rcm">
+                    <label for="st-rcm">1</label>
+                </td>
+                <td>
+                    <input type="radio" name="recommend" id="d-rcm">
+                    <label for="d-rcm">2</label>
+                </td>
+                <td>
+                    <input type="radio" name="recommend" id="a-rcm">
+                    <label for="a-rcm">3</label>
+                </td>
+                <td>
+                    <input type="radio" name="recommend" id="sa-rcm">
+                    <label for="sa-rcm">4</label>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
