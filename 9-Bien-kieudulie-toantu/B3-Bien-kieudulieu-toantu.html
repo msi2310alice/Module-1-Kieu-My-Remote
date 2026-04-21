@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diện tích và chu vi đường tròn</title>
+</head>
+<body>
+    <form>
+        <label for="bankinh">Bán kính</label>
+        <input type="number" id="bankinh" placeholder="Nhập bán kính">
+        <button type="button" onclick="tinhtoan()">Tính</button>
+        <p id="dientich"></p>
+        <p id="chuvi"></p>
+    </form>
+    <script>
+        function tinhtoan() {
+            let inputr = document.getElementById("bankinh").value;
+            let r = parseInt(inputr);
+            const pi = 3.14;
+            let S = pi * r * r;
+            let C = pi * 2 * r;
+            document.getElementById("dientich").innerHTML="Diện tích hình tròn: " + S;
+            document.getElementById("chuvi").innerHTML="Chu vi hình tròn: " + C;
+        }
+    </script>
+</body>
+</html>
