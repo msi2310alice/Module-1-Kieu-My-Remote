@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <form>
+    <fieldset>
+        <legend>Calculator</legend>
+        <input type="number" name="toanhan1" id="th1" placeholder="Nhập số hạn 1">
+        <input type="number" name="toanhan2" id="th2" placeholder="Nhập số hạn 2">
+        <button type="button" onclick="toantu('+')">Addition (+)</button>
+        <button type="button" onclick="toantu('-')">Subtraction (-)</button>
+        <button type="button" onclick="toantu('*')">Multiplication (x)</button>
+        <button type="button" onclick="toantu('/')">Division (/)</button>
+        <p id="kq"></p>
+    </fieldset>
+    </form>
+    <script>
+        
+        function toantu(pheptoan) {
+            let a = Number(document.getElementById("th1").value);
+            let b = Number(document.getElementById("th2").value);
+            
+            let kq = eval(a + pheptoan + b);
+            document.getElementById("kq").innerHTML= "Kết quả: " + kq;
+        }
+    </script>
+</body>
+</html>
