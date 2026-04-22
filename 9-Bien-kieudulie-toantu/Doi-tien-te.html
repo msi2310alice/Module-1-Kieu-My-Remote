@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+    <style>
+        div { 
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Chuyển đổi tiền tệ</legend>
+            <div>
+                <label for="amt">Amount</label>
+                <input type="number" name="amount" id="amt">
+            </div>
+            <div>
+                <label for="from">From Currency</label>
+                <select name="From Currency" id="from">
+                    <option value="1">USD</option>
+                    <option value="26000">VND</option>
+                    <option value="0.85">EURO</option>
+                </select>
+            </div>
+            <div>
+                <label for="to">To Currency</label>
+                <select name="From Currency" id="to">
+                    <option value="1">USD</option>
+                    <option value="26000">VND</option>
+                    <option value="0.85">EURO</option>
+                </select>
+            </div>
+            <button type="button" onclick="doitien()">Đổi tiền</button>
+            <p id="tien"></p>
+        </fieldset>
+    </form>
+    <script>
+        function doitien() {
+            let inputtien = Number(document.getElementById("amt").value);
+            let f = Number(document.getElementById("from").value);
+            let t = Number(document.getElementById("to").value);
+
+            console.log(inputtien);
+            let doitien = inputtien * t / f ;
+            document.getElementById("tien").innerHTML = "Kết quả: " + doitien ;
+        }
+    </script>
+</body>
+</html>
