@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy tính nâng cao</title>
+    <style>
+        .r1, .r2, .r3, .r4 {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            margin-right: 20px;
+        }
+        #nhaplieu { 
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="hienthi" readonly>
+         <div class="r4">
+            <button type="button" onclick="nhap(7)">7</button>
+            <button type="button" onclick="nhap(8)">8</button>
+            <button type="button" onclick="nhap(9)">9</button>
+            <button type="button" onclick="nhap('/')">/</button>
+        </div>
+        
+        <div class="r3">
+            <button type="button" onclick="nhap(4)">4</button>
+            <button type="button" onclick="nhap(5)">5</button>
+            <button type="button" onclick="nhap(6)">6</button>
+            <button type="button" onclick="nhap('*')">x</button>
+        </div>
+        <div class="r2">
+            <button type="button" onclick="nhap(1)">1</button>
+            <button type="button" onclick="nhap(2)">2</button>
+            <button type="button" onclick="nhap(3)">3</button>
+            <button type="button" onclick="nhap('-')">-</button>
+        </div>
+    
+        <div class="r1">
+            <button type="button" onclick="nhap(0)">0</button>
+            <button type="button" onclick="nhap('.')">.</button>
+            <button type="button" onclick="tinh()">=</button>
+            <button type="button" onclick="nhap('+')">+</button>
+        </div>
+        <button onclick="xoa()">AC</button>
+    </form>   
+    <script>
+        function nhap(giatri) {
+            document.getElementById("hienthi").value += giatri;
+        }
+        function tinh() {
+            let x = document.getElementById("hienthi").value;
+            let b = eval(x);
+            document.getElementById("hienthi").value = b;
+            
+        }
+        function xoa() {
+            document.getElementById("hienthi").value = "";
+        }
+    </script>
+</body>
+</html>
