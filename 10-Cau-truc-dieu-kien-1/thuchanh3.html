@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+</head>
+<body>
+    <p id = "in"></p>
+    <script>
+        let user = prompt("Nhập username");
+        if (user == "Admin") {
+            let password = prompt("Nhập Password")
+            if (password == "TheMaster") {
+                document.getElementById("in").innerHTML = "Welcome!";
+            } else if (pass == null) {
+                alert("Canceled");
+                //document.getElementById("in").innerHTML = "Canceled."
+                } else {
+                    document.getElementById("in").innerHTML = "wrong password"
+                }
+        } else if (user == null) {
+            alert("canceled")
+              //document.getElementById("in").innerHTML = "Canceled";  
+            } else {
+              document.getElementById("in").innerHTML = "I don't know you";  
+            }
+        
+    </script>
+    
+</body>
+</html>
